@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "dfx": "0.11.1",
+  "canisters": {
+    "myicp05_backend": {
+      "type": "motoko",
+      "main": "src/myicp05_backend/main.mo"
+    },
+    "myicp05_frontend": {
+      "type": "assets",
+      "source": [
+        "src/myicp05_frontend/assets"
+      ],
+      "dependencies": [
+        "myicp05_backend"
+      ]
+    }
+  },
+  "defaults": {
+    "build": {
+      "packtool": "",
+      "args": ""
+    }
+  },
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  }
+}
